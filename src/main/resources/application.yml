@@ -1,0 +1,30 @@
+spring:
+application:
+name: schoolmanagement
+data:
+mongodb:
+uri: mongodb://localhost:27017/schoolDb
+# uri: mongodb+srv://JustInTime:JustInTime@cluster0.vzdxaos.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+database: schoolDb
+auto-index-creation: true
+# The active profile (default is none, but you can set it here)
+profiles:
+      active: dev
+#
+#frontend:
+#redirect:
+#uri: ${GOOGLE_CALLBACK_URL}
+
+applications:
+email:
+service:
+type: ${EMAIL_TYPE}
+sendgrid:
+      api-key: ${sendgrid.api-key}
+
+jwt:
+secret:
+key: ${JWT_SECRET}
+expiration:
+time: ${JWT_EXPIRATION}
+
